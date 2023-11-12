@@ -1,11 +1,33 @@
-# fairfight: Verifiable Benchmark for MLaaS
+# DamnFair: Verifiable Benchmark for MLaaS
 
 ## Introduction
-In an era where Machine Learning as a Service (MLaaS) is rapidly growing, ensuring the integrity and reliability of these services is paramount. The DamnFair team proposes a verifiable benchmark to prevent MLaaS scams, safeguarding the quality and trustworthiness of machine learning services.
+Welcome to DamnFair, a project pioneered by Thomas Zhang, Mingzhe Wang, and Yolanda Ying. Our mission is to establish a verifiable benchmark that fortifies the integrity of Machine Learning as a Service (MLaaS) and protects against fraudulent activities in the domain.
 
 ## Project Overview
-Our project aims to introduce a standardized, verifiable benchmark for MLaaS offerings. This benchmark is designed to:
+DamnFair introduces a groundbreaking zero-knowledge machine learning system designed to:
 
-- Evaluate the performance and accuracy of various MLaaS providers.
-- Ensure that the machine learning models provided by these services are genuine, robust, and perform as advertised.
-- Protect users from potential scams and fraudulent activities in the MLaaS domain.
+- **Authenticate ML Models:** Enable users to confirm the authenticity of ML models, thus ensuring they get the service quality they pay for.
+- **Enhance Data Privacy:** Safeguard the privacy of data used in machine learning services.
+- **Counteract MLaaS Scams:** Provide mechanisms to prevent and identify scams in MLaaS, enhancing trust in these services.
+
+## Features
+- **Zero-Knowledge Proof System:** Utilizes advanced cryptographic techniques for model verification without compromising data privacy.
+- **Benchmarking and Validation:** Comprehensive tools to assess the performance claims of MLaaS providers against actual performance metrics.
+- **Transparency and Trust:** Establishes a transparent environment where MLaaS providers' claims can be independently verified.
+
+## Case Studies
+- **Alice's Team:**
+  - Actual Accuracy: 66.67%
+  - Claimed Accuracy: 85%
+- **Bob’s Team:**
+  - Actual Accuracy: 86.90%
+  - Claimed Accuracy: 85%
+
+These case studies highlight the potential discrepancies between claimed and actual model accuracies, underlining the need for our solution.
+
+## Team
+- **Team Name:** DamnFair
+- **Members:**
+  - Thomas Zhang
+  - Mingzhe Wang
+  - Yolanda Ying
