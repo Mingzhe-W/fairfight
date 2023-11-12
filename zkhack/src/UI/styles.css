@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  /*
+  header {
+    background-color: #e0e0e0;
+    padding: 20px;
+    text-align: center;
+  }
+  */
+
+  header h1 {
+    color: #333;
+  }
+  
+  main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .reset-btn,
+  .back-btn,
+  .create-task-btn,
+  .add-auction-btn,
+  .view-btn,
+  .submit-btn,
+  .select-provider-btn
+  .end-auction-btn {
+    background-color: #4CAF50;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .reset-btn:hover,
+  .back-btn:hover,
+  .create-auction-btn:hover,
+  .add-auction-btn:hover,
+  .view-btn:hover,
+  .submit-btn:hover,
+  .select-provider-btn:hover
+  .end-auction-btn:hover {
+    background-color: #2E7D32;
+  }
+  
+  .dropdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
+  }
+  
+  .dropdown {
+    padding: 5px 10px;
+    margin-right: 10px;
+    background-color: #FFFFFF;
+    color: #333;
+    border: 1px solid #CCCCCC;
+  }
+  
+  .address-input {
+    padding: 5px 10px;
+    flex-grow: 1;
+    background-color: #FFFFFF;
+    color: #333;
+    border: 1px solid #CCCCCC;
+  }
+  
+  .task-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* styles.css (partial) */
+  .task-item[data-active="true"] {
+    background-color: rgba(0, 150, 0, 0.1);
+  }
+
+  .claim[data-selected="true"] {
+    background-color: rgba(0, 150, 0, 0.1); /* Or any other style to indicate selection */
+  }
+  
+  .task-item[data-active="false"] {
+    background-color: rgba(150, 0, 0, 0.1);
+  }
+
+  
+  .task-item {
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  
+  .view-btn {
+    align-self: flex-end;
+    margin-top: 10px;
+  }
+  
+  .auction-info{
+    margin-bottom: 2rem;
+  }
+
+  /* .claim.selected {
+    background-color: #2E7D32; 
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  } */
+  
+  .claim {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .description-container {
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 150px; /* Adjust the height as needed */
+    overflow: auto;
+    white-space: pre-wrap;
+  }
+  
+  header {
+    background-color: #e0e0e0;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+  }
+
+  .corner-div {
+    background-color: #f5f5f5;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    transform: translateY(0);
+    border-radius: 5px;
+    max-width: 20%;
+  }
+  
+
+  .corner-div label,
+  .corner-div p {
+    display: inline;
+  }
+
+  .real-time-corner {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border-radius: 3px;
+  }
+  
+  button.submit-btn:disabled {
+    background-color: #cccccc;
+    color: #888888;
+    cursor: not-allowed;
+  }
+
+  button.select-provider-btn:disabled {
+    background-color: #cccccc;
+    color: #888888;
+    cursor: not-allowed;
+  }
+  
+  

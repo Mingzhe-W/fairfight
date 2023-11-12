@@ -1,0 +1,100 @@
+{
+  "_format": "ethers-rs-sol-cache-3",
+  "paths": {
+    "artifacts": "out",
+    "build_infos": "out/build-info",
+    "sources": "src",
+    "tests": "test",
+    "scripts": "script",
+    "libraries": [
+      "lib"
+    ]
+  },
+  "files": {
+    "src/5_SVC_verifier.sol": {
+      "lastModificationDate": 1699747022709,
+      "contentHash": "477ff06d5364d1b2a210e251bb047d36",
+      "sourceName": "src/5_SVC_verifier.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "Verifier": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "5_SVC_verifier.sol/Verifier.json"
+        }
+      }
+    },
+    "src/payment.sol": {
+      "lastModificationDate": 1699770514750,
+      "contentHash": "55b082664530f929fc5b909fb4653a87",
+      "sourceName": "src/payment.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "PaymentContract": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "payment.sol/PaymentContract.json"
+        },
+        "Verifier": {
+          "0.8.21+commit.d9974bed.Darwin.appleclang": "payment.sol/Verifier.json"
+        }
+      }
+    }
+  }
+}

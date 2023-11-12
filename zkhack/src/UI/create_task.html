@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New ML Task</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+<body>
+  <header>
+    <h1>New ML Task</h1>
+  </header>
+
+  <main>
+    <button onclick="location.href='index.html'" class="back-btn">Back to Dashboard</button>
+    <input type="hidden" id="task-buyer-address">
+
+    <form onsubmit="event.preventDefault(); createTask();">
+      <!-- <h3>Auction Name</h3>
+      <input type="text" id="name" required> -->
+
+      <h3>Basic Information</h3>
+
+      <div>
+          <label for="Task-id">Task Name:</label>
+          <input type="text" id="task-id" required>
+          <label for="conclusion-time">Conclusion Time:</label>
+          <input type="datetime-local" id="conclusion-time"><br>
+          <p> Buyer Addr: 0x<span id = "buyer-addr"></span></p>
+      </div>
+
+      <h3>Task Type</h3>
+      <div class="form-section">
+        <input type="radio" id="task-type-cv" name="task-type" value="CV">
+        <label for="task-type-cv">Computer Vision (CV)</label><br>
+
+        <input type="radio" id="task-type-nlp" name="task-type" value="NLP">
+        <label for="task-type-nlp">Natural Language Processing (NLP)</label><br>
+
+        <input type="radio" id="task-type-rl" name="task-type" value="RL">
+        <label for="task-type-rl">Reinforcement Learning (RL)</label><br>
+
+        <input type="radio" id="task-type-other" name="task-type" value="Other">
+        <label for="task-type-other">Other</label>
+        <input type="text" id="other-task-type" name="other-task-type" disabled>
+      </div>
+
+      <h3>Dataset Provision</h3>
+      <div class="form-section">
+        <input type="checkbox" id="provide-dataset" name="provide-dataset" value="yes">
+        <label for="provide-dataset">I will provide the dataset</label><br>
+
+        <!-- This input is disabled by default and will be enabled if the user does not check the above box -->
+        <label for="dataset-name">Dataset Name:</label>
+        <input type="text" id="dataset-name" name="dataset-name" disabled>
+      </div>
+
+      <h3>Description</h3>
+      <div class="form-section">
+          <textarea id="task-description" rows="4" cols="50" placeholder="Enter the ML task description here"></textarea>
+      </div>
+
+      <h3>Payment Network</h3>
+      <div class="form-section">
+        <input type="checkbox" id="payment-network-erc20" name="payment-network" value="ERC20">
+        <label for="payment-network-erc20">ERC20 (Ethereum)</label><br>
+
+        <input type="checkbox" id="payment-network-cronos" name="payment-network" value="Cronos">
+        <label for="payment-network-cronos">Mantle MNT</label><br>
+
+        <!-- ... add more payment options as needed ... -->
+      </div>
+
+      <button type="submit" class="submit-btn" disabled>Create Auction</button>
+
+    </form>
+
+    <div class="corner-div">
+      <label>User:</label><p id="user-address"></p>
+      <div id="load-key" class="key-file-wrapper">
+        <label for="fileInput">Key File:</label>
+        <input type="file" id="fileInput" onchange="loadFile()" />
+      </div>
+    </div>
+
+  </main>
+  <div id="real-time" class="real-time-corner"></div>
+  <script src="script.js"></script>
+  <script>
+    function updateRealTime() {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString();
+      const realTimeElement = document.getElementById('real-time');
+      realTimeElement.textContent = timeString;
+    }
+
+    setInterval(updateRealTime, 1000);
+  </script>
+</body>
+</html>

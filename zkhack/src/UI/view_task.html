@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detailed ML Task View</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Detailed ML Task View</h1>
+  </header>
+
+  <main>
+    <!-- Hidden field to store the buyer's address -->
+
+
+    <a href="index.html"><button class="back-btn">Back To Dashboard</button></a>
+
+    <h2>Task Information</h2>
+    <p>Service Buyer: 0x<span id="buyer-addr"></span></p>
+    <p>Task ID: <span id="task-id"></span> Claim: <span id="claim-id"></span></p>
+
+    <p>Description:</p>
+    <div id="task-description" class="description-container"></div>
+    <p>Conclusion Time: <span id="conclusion-time"></span></p>
+
+    <div id="claim-section" class="claim-section">
+      <h3>Submit Model Claim</h3>
+      <form id="submit-claim-form" onsubmit="event.preventDefault(); addModelClaim();">
+
+        <label for="service-provider">Service Provider:</label>
+        <input type="text" id="service-provider" required><br>
+        <!-- Model Detail (Optional) -->
+        <!-- <label for="model-detail" placeholder = "e.g., NN Network, SVC">Model Detail :</label>
+        <input type="text" id="model-detail"><br> -->
+        
+        <!-- Quoted Price (Required) -->
+        <label for="quoted-price">Quoted Price ($):</label>
+        <input type="number" id="quoted-price" required><br>
+        
+        <!-- Overall Accuracy (Required) -->
+        <label for="overall-accuracy">Overall Accuracy (%):</label>
+        <input type="number" id="overall-accuracy" step="0.01" required><br>
+        
+        <!-- Inference Time and Cost (Both Required) -->
+        <label for="inference-time">Inference Time (ms):</label>
+        <input type="number" id="inference-time" required><br>
+  
+        <label for="inference-cost">Inference Cost ($):</label>
+        <input type="number" id="inference-cost" required><br>
+      
+        <h3>Short Description</h3>
+        <div class="form-section">
+            <textarea id="model-description" rows="3" cols="50" placeholder="Provide a brief description of the model..."></textarea>
+        </div>
+
+        <button id = "claim-model-form" type="submit" class = "submit-btn" disabled>Submit Claim</button>
+      </form>
+    </div>
+    <h2> Claim Model List</h2>
+    <div id="claims-list" class="claims-list">
+      <!-- Tasks will be loaded here by the script.js -->
+    </div>
+    
+    <div class="corner-div">
+      <label>User:</label><p id="user-address"></p>
+      <div id="load-key" class="key-file-wrapper">
+        <label for="fileInput">Key File:</label>
+        <input type="file" id="fileInput" onchange="loadFile()" />
+      </div>
+    </div>
+    <!-- The End Auction button can be repurposed for "Select Service Provider" -->
+    <!-- <button class="select-provider-btn" id="select-provider-btn" onclick="selectServiceProvider()">Select Service Provider</button> -->
+
+  </main>
+
+
+  <div id="real-time" class="real-time-corner"></div>
+  <script src="script.js"></script>
+  <script>
+    function updateRealTime() {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString();
+      const realTimeElement = document.getElementById('real-time');
+      realTimeElement.textContent = timeString;
+    }
+
+    setInterval(updateRealTime, 1000);
+  </script>
+</body>
+</html>
